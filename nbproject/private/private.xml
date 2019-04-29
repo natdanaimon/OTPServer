@@ -2,13 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/D:/Work%20Public/Batch/OTPServer/src/co/mm/util/t2.java</file>
-            <file>file:/D:/Work%20Public/Batch/OTPServer/src/co/mm/sms/InboundNotification.java</file>
-            <file>file:/D:/Work%20Public/Batch/OTPServer/src/co/mm/db/jdbc/MyApplication.java</file>
-            <file>file:/D:/Work%20Public/Batch/OTPServer/src/co/mm/main/Jobscheduler.java</file>
-            <file>file:/D:/Work%20Public/Batch/OTPServer/src/resources/config.properties</file>
-            <file>file:/D:/Work%20Public/Batch/OTPServer/src/resources/log4j.properties</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

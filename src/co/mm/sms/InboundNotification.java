@@ -52,7 +52,7 @@ public class InboundNotification implements IInboundMessageNotification {
     @Override
     public void process(AGateway gateway, MessageTypes msgType, InboundMessage msg) {
         if (msgType == MessageTypes.INBOUND) {
-            
+
             String senderName = msg.getOriginator().toUpperCase();
             initialDBConnectPoolManager();
             String smsDate = msg.getDate().toString();
@@ -62,6 +62,9 @@ public class InboundNotification implements IInboundMessageNotification {
                 deleteMessage(gateway, msg);
             } else {
                 boolean flgInsert = dbImpl.insertSMS(d);
+                if (flgInsert) {
+                    deleteMessage(gateway, msg);
+                }
 
             }
 
@@ -98,7 +101,7 @@ public class InboundNotification implements IInboundMessageNotification {
         b.setAccountNo("");
         b.setMessage(txt);
         b.setSmsDatetime(smsDate);
-        
+
         String otp = getOTP(txt);
         String refNo = getRefNo(txt);
 
@@ -146,8 +149,5 @@ public class InboundNotification implements IInboundMessageNotification {
 
         return code;
     }
-    
-    
-   
 
 }

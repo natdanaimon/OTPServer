@@ -79,8 +79,8 @@ public final class BankService {
             System.in.read();
             System.in.read();
         } catch (Exception e) {
-            System.out.println("Exception : " + e.getMessage());
-            LogUtil.getLogService().error("Exception : " + e.getMessage());
+            System.out.println("InsertOTP Exception : " + e.getMessage());
+            LogUtil.getLogService().error("InsertOTP Exception : " + e.getMessage());
         } finally {
 
             try {
