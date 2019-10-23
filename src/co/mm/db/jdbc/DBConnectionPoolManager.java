@@ -3,6 +3,7 @@ package co.mm.db.jdbc;
 
 
 
+import co.mm.util.EncryptionUtil;
 import co.mm.util.PropertiesConfig;
 import org.apache.commons.pool.ObjectPool;
 import org.apache.commons.pool.PoolableObjectFactory;
@@ -11,10 +12,10 @@ import org.apache.commons.pool.impl.GenericObjectPoolFactory;
 
 public class DBConnectionPoolManager {
     
-    private static final String POOL_DB_CONNECTION = PropertiesConfig.getConfig("pool.db.url");
+    private static final String POOL_DB_CONNECTION = EncryptionUtil.decrypt(PropertiesConfig.getConfig("pool.db.url"));
     private static final String POOL_DB_PORT = PropertiesConfig.getConfig("pool.db.port");
-    private static final String POOL_DB_USER = PropertiesConfig.getConfig("pool.db.username");
-    private static final String POOL_DB_PASSWORD = PropertiesConfig.getConfig("pool.db.password");
+    private static final String POOL_DB_USER = EncryptionUtil.decrypt(PropertiesConfig.getConfig("pool.db.username"));
+    private static final String POOL_DB_PASSWORD = EncryptionUtil.decrypt(PropertiesConfig.getConfig("pool.db.password"));
     private static final String POOL_DB_SCHEMA = PropertiesConfig.getConfig("pool.db.schema");
     
     public ObjectPool connPool;
